@@ -1,5 +1,10 @@
+# Ignora le cartelle pesanti di Huggingface/BERT
 /results/
-/data/WELFake_dataset.csv
+**/checkpoint-*/
 *.pt
-*.safetensors
 *.bin
+*.safetensors
+*.csv
+
+# Notebook checkpoints
+.ipynb_checkpoints/
