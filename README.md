@@ -18,7 +18,7 @@ Il dataset usato per questo progetto è disponibile su [Kaggle](https://www.kagg
 
 ---
 
-### ⚙️ Panoramica del workflow
+### Panoramica del workflow
 
 1. **Caricamento & Pulizia Dati**
 
@@ -38,7 +38,7 @@ Il dataset usato per questo progetto è disponibile su [Kaggle](https://www.kagg
 
 ---
 
-### 🤖 Modelli implementati
+### Modelli implementati
 
 | Modello                                     | Ottimizzazione               |
 | ------------------------------------------- | ---------------------------- |
@@ -51,7 +51,7 @@ Il dataset usato per questo progetto è disponibile su [Kaggle](https://www.kagg
 
 ---
 
-### 📊 Valutazione
+### Valutazione
 
 * Accuracy, Precision, Recall, F1-score
 * Matrici di confusione
@@ -60,7 +60,7 @@ Il dataset usato per questo progetto è disponibile su [Kaggle](https://www.kagg
 
 ---
 
-### 📈 Confronto modelli
+### Confronto modelli
 
 Al termine vengono stampati e ordinati:
 
@@ -70,9 +70,9 @@ Al termine vengono stampati e ordinati:
 
 ---
 
-### 🧪 Come eseguire
+### Come eseguire
 
-Assicurati che il file `WELFake_Dataset.csv` sia nella cartella `data/`.
+Assicurarsi che il file `WELFake_Dataset.csv` sia nella cartella `data/`.
 Poi esegui lo script Python:
 
 ```bash
@@ -81,27 +81,9 @@ python fake_news_classification.py
 
 ---
 
-### ✏️ Personalizzazione
-
-Puoi facilmente:
-
-* Aggiungere nuovi modelli (`KMeans`, `VotingClassifier` custom, ecc.)
-* Modificare parametri TF-IDF (ngram\_range, stop\_words)
-* Sperimentare altre metriche o visualizzazioni
-
----
-
-### 📚 Librerie principali
+### Librerie principali
 
 * `pandas`, `numpy` → gestione e analisi dati
 * `matplotlib`, `seaborn`, `wordcloud` → grafici e visualizzazione
 * `scikit-learn` → modelli ML tradizionali, tuning, metriche
 * `torch`, `transformers` → modelli deep learning (BERT)
-
----
-
-Se vuoi, posso anche generarti:
-✅ Una versione in inglese
-✅ Un template `.md` più tecnico con badge, struttura repo, come contribuire, ecc.
-
-Fammi sapere! 🚀
