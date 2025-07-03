@@ -1,5 +1,7 @@
 # Simulatore Little Man Computer (LMC) e Assembler
 
+## Ester De Giosa SM3201572
+
 ## Descrizione
 Questo progetto implementa un simulatore per il Little Man Computer (LMC) insieme a un Assembler che converte il codice Assembly in memoria eseguibile dal simulatore.
 
