@@ -13,7 +13,7 @@ Il progetto include i seguenti file principali:
 
 ## Istruzioni
 
-**Configurazione dei parametri**:
+## **Configurazione dei parametri**:
    I parametri di ingresso devono essere inseriti direttamente nel file `main.py` per velocizzare l'esecuzione. In particolare, è necessario configurare le seguenti variabili:
 
    - **`nome`**: il percorso del file contenente il programma scritto in linguaggio Assembly. Ad esempio, `program.lmc`.
@@ -22,18 +22,18 @@ Il progetto include i seguenti file principali:
    Esempio di configurazione in `main.py`:
 
    ```python
-   nome = "squares.lmc"         # Percorso del file Assembly
+   nome = "squares.lmc"         
    input_queue = [5, 8]
-   ```        # Lista dei valori di input
+   ```        
 
-**Compilazione del programma**:  
+## **Compilazione del programma**:  
    Una volta configurato il file `main.py`, si esegua il programma utilizzando il seguente comando:
 
    ```bash
    python main.py
 ```
 
-**Output**:
+## **Output**:
 Al termine dell'esecuzione, l'output finale verrà visualizzato nel terminale. Inoltre, sarà possibile vedere lo stato finale dell'LMC:
 - La memoria dell'LMC.
 - Il valore dell'accumulatore.
