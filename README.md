@@ -23,7 +23,8 @@ Il progetto include i seguenti file principali:
 
    ```python
    nome = "squares.lmc"         # Percorso del file Assembly
-   input_queue = [5, 8]         # Lista dei valori di input
+   input_queue = [5, 8]
+   ```        # Lista dei valori di input
 
 **Compilazione del programma**:  
    Una volta configurato il file `main.py`, si esegua il programma utilizzando il seguente comando:
