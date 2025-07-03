@@ -18,7 +18,7 @@ Il dataset usato per questo progetto è disponibile su [Kaggle](https://www.kagg
 
 ---
 
-### Panoramica del workflow
+### Panoramica
 
 1. **Caricamento & Pulizia Dati**
 
@@ -73,7 +73,7 @@ Al termine vengono stampati e ordinati:
 ### Come eseguire
 
 Assicurarsi che il file `WELFake_Dataset.csv` sia nella cartella `data/`.
-Poi esegui lo script Python:
+Poi eseguire lo script Python:
 
 ```bash
 python fake_news_classification.py
