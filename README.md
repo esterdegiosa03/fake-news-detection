@@ -19,9 +19,9 @@ Il progetto include i seguenti file principali:
    Prima di eseguire il programma, è necessario configurare alcuni parametri nel file `main.py`. Di seguito sono spiegati i principali parametri da modificare:
 
    - **`file_name`**: il percorso del file contenente il programma scritto in linguaggio Assembly. Ad esempio, `file_name = "squares.lmc"`.
-   - - Modificare la stringa `squares.lmc` in main.py con il nome del file assembly da usare.
+   Modificare la stringa `squares.lmc` in main.py con il nome del file assembly da usare.
    - **`input_queue`**: un elenco di valori che il programma utilizza come input. Ad esempio, `[5, 10]`.
-   - - Modificare la lista `lmc.input_queue` in main.py con la lista di valori da usare.
+   Modificare la lista `lmc.input_queue` in main.py con la lista di valori da usare.
        
 
 ## **Esecuzione del programma**:  
