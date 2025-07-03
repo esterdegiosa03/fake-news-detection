@@ -15,22 +15,18 @@ Il programma è composto da vari moduli:
 - **Makefile**: Gestisce la compilazioen del progetto
 
 
-### **Strutture principali**
-- **Color**:  
-  Utilizzata per rappresentare un colore in formato RGB.  
-  È implementata come una struct senza puntatori per mantenere leggerezza e semplicità.
-
+### **Strutture**
 - **`Vec3`**:  
   Rappresenta un vettore tridimensionale o un punto nello spazio. Utilizzato per calcoli matematici relativi a direzioni e posizioni.
 
-- **`Ray`**:  
-  Rappresenta un raggio, contenente una direzione normalizzata.
+- **`Color`**:  
+  Struttura utilizzata per rappresentare un colore in formato RGB.
 
 - **`Sphere`**:  
-  Definisce una sfera nella scena, includendo centro, raggio e colore.
+  Struttura utilizzata per rappresentare una sfera nella scena. Contiene centro, raggio e colore.
 
 - **`Scene`**:  
-  Contiene la descrizione completa della scena: viewport, colore di sfondo, e l'elenco delle sfere.
+  Struttura utilizzata per contenere la descrizione completa della scena: viewport, colore di sfondo, il numero delle sfere, e l'elenco delle sfere.
 
 
 ---
@@ -70,10 +66,10 @@ Questo comando carica la scena da `scene.txt`, renderizza l'immagine di dimensio
 4. Se non c'è intersezione, assegna il colore di sfondo al pixel.
 5. Salva l'immagine risultante in formato **PPM**.
 
-##**Visualizzazione**  
+## **Visualizzazione**  
    Per visualizzare l'immagine, recarsi nella cartella in cui è stato generato il file PPM e aprirlo con un visualizzatore di immagini.
 
-##**Pulizia**  
+## **Pulizia**  
    Per rimuovere i file oggetto generati durante la compilazione, eseguire:
    ```bash
    make clean
