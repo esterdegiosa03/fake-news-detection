@@ -1,76 +1,72 @@
-### README.md
+# Simulatore Little Man Computer (LMC) e Assembler
 
-
-# Rendering 3D Scene in PPM Format
+Questo progetto implementa un simulatore per il **Little Man Computer (LMC)** insieme a un **Assembler** che converte il codice Assembly in memoria eseguibile dal simulatore. L'MC è un modello didattico di un computer per comprendere i principi base di architettura e esecuzione di istruzioni.
 
 ## Descrizione
-Questo progetto implementa un renderer 3D in C che carica una scena da un file, calcola l'intersezione tra raggi e sfere e poi genera un'immagine in formato **PPM**. La scena è composta da sfere e un viewport, e il programma calcola il colore dei pixel in base agli oggetti che intersecano i raggi proiettati dalla telecamera.
 
-Il programma è composto da vari moduli:
-- **main.c**: Funzione principale che gestisce il flusso di esecuzione.
-- **scene.c**: Gestisce il caricamento della scena, l'intersezione dei raggi con le sfere e il calcolo della direzione dei raggi.
-- **ppm.c**: Gestisce la scrittura dell'immagine in formato PPM.
-- **vec3.c**: Funzioni utili per la gestione dei vettori 3D.
-- **scene.h, ppm.h, vec3.h**: Header files per le funzioni dichiarate nei file `.c`.
-- **Makefile**: Gestisce la compilazioen del progetto
+- **Assembler**: Traduci il codice Assembly in memoria eseguibile per LMC.
+- **LMC**: Simula un computer con un set limitato di istruzioni per eseguire programmi di esempio scritti in Assembly.
 
+Il progetto include:
+1. Un **Assembler** che converte le istruzioni Assembly in formato eseguibile.
+2. Un **simulatore LMC** che esegue le istruzioni in memoria, simula l'esecuzione di un programma e visualizza l'output.
 
-### **Strutture**
-- **`Vec3`**:  
-  Rappresenta un vettore tridimensionale o un punto nello spazio. Utilizzato per calcoli matematici relativi a direzioni e posizioni.
+## Istruzioni
 
-- **`Color`**:  
-  Struttura utilizzata per rappresentare un colore in formato RGB.
+### Requisiti
+- Python 3.x
 
-- **`Sphere`**:  
-  Struttura utilizzata per rappresentare una sfera nella scena. Contiene centro, raggio e colore.
+### Installazione
 
-- **`Scene`**:  
-  Struttura utilizzata per contenere la descrizione completa della scena: viewport, colore di sfondo, il numero delle sfere, e l'elenco delle sfere.
+1. **Clona il repository**:
+    ```bash
+    git clone https://github.com/tuo-username/lmc-simulator.git
+    cd lmc-simulator
+    ```
 
+2. **Esegui il programma**:
+    Puoi eseguire il programma direttamente con Python:
 
----
+    ```bash
+    python main.py
+    ```
 
-## **Compilazione**
-Per compilare il progetto, si esegue:
+    Assicurati che il file `multiplication.lmc` (o qualsiasi altro file di codice Assembly) sia presente nella stessa cartella del progetto o aggiorna il percorso nel codice.
 
-```bash
-make
-```
+### Struttura del Progetto
 
-Questo comando genererà un eseguibile chiamato `raytracer`.
+Il progetto contiene i seguenti file principali:
 
-## **Esecuzione**  
-Per eseguire il programma, si usa:
-```bash
-./raytracer <scene_file> <output_image> <width> <height>
-```
+- **assembler.py**: Contiene la classe `Assembler`, che traduce il codice Assembly in memoria eseguibile.
+- **lmc.py**: Contiene la classe `LMC`, che simula l'esecuzione del programma.
+- **main.py**: Il file principale che esegue il programma LMC, eseguendo i passaggi di assemblaggio e simulazione.
+- **multiplication.lmc** (esempio): Un file di esempio scritto in Assembly per LMC (assicurati che sia presente per eseguire il programma).
 
-### Parametri:
-* **scene\_file**: Il percorso del file di scena (es. `scene.txt`).
-* **output\_image**: Il nome del file di output in formato PPM (es. `output.ppm`).
-* **width**: La larghezza dell'immagine (es. `800`).
-* **height**: L'altezza dell'immagine (es. `600`).
+### Come funziona
 
-### Esempio di utilizzo:
-```bash
-./raytracer scene.txt output.ppm 800 600
-```
-Questo comando carica la scena da `scene.txt`, renderizza l'immagine di dimensione `800x600` e la salva nel file `output.ppm`.
+1. **Assembler**:
+   - Carica e parse le etichette (labels) nel codice Assembly.
+   - Traduci le istruzioni in memoria eseguibile.
+   - La memoria è una lista di 100 celle dove ogni cella può contenere un valore che rappresenta un'istruzione o un dato.
 
-## Come Funziona
+2. **LMC**:
+   - Simula un computer con un accumulatore, un contatore di programma (PC) e le code di input e output.
+   - Le istruzioni che il programma può eseguire includono ADD, SUB, LDA, STA, BRA, BRZ, BRP, INP, OUT e HLT.
+   - Le istruzioni vengono eseguite ciclicamente finché non si incontra un'istruzione **HLT** (ferma l'esecuzione).
 
-1. Il programma carica la scena da un file di configurazione.
-2. Calcola i raggi per ciascun pixel dell'immagine in base alla posizione della telecamera e della scena.
-3. Verifica se i raggi intersecano delle sfere. Se sì, assegna il colore della sfera al pixel.
-4. Se non c'è intersezione, assegna il colore di sfondo al pixel.
-5. Salva l'immagine risultante in formato **PPM**.
+### Esecuzione di un programma
 
-## **Visualizzazione**  
-   Per visualizzare l'immagine, recarsi nella cartella in cui è stato generato il file PPM e aprirlo con un visualizzatore di immagini.
+1. Scrivi un programma Assembly per LMC e salvalo con estensione `.lmc` (ad esempio `multiplication.lmc`).
+2. Esegui il programma tramite il file `main.py`.
+3. Durante l'esecuzione, l'MC simulerà l'elaborazione e visualizzerà l'output.
 
-## **Pulizia**  
-   Per rimuovere i file oggetto generati durante la compilazione, eseguire:
-   ```bash
-   make clean
-```
+### Esempio di programma Assembly
+
+```assembly
+INP
+STA 99
+INP
+LDA 99
+MUL 99
+OUT
+HLT
